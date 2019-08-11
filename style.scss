@@ -1,12 +1,11 @@
-$primary-color: #444;
-$secondary-color: #eece1c;
-@mixin easeOut() {
-  transition: all 1.5 ease-out;
-}
+@import "config";
+@import "menu";
+
 * {
   box-sizing: border-box;
 }
 body {
+  @include background;
   background: $primary-color;
   color: #fff;
   height: 100%;
@@ -48,7 +47,7 @@ main {
       padding: 0.4rem;
       &:hover {
         color: $secondary-color;
-        @include easeOut();
+        @include easeOut;
       }
     }
   }
