@@ -1,0 +1,61 @@
+$primary-color: #444;
+$secondary-color: #eece1c;
+@mixin easeOut() {
+  transition: all 1.5 ease-out;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background: $primary-color;
+  color: #fff;
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+  &.lrg-header {
+    font-size: 6rem;
+  }
+  &.sml-header {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+  }
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+.text-secondary {
+  color: $secondary-color;
+}
+main {
+  padding: 4rem;
+  height: 100%;
+  .icons {
+    margin-top: 1rem;
+    a {
+      padding: 0.4rem;
+      &:hover {
+        color: $secondary-color;
+        @include easeOut();
+      }
+    }
+  }
+  &#Home {
+    overflow: hidden;
+    h1 {
+      margin-top: 20vh;
+    }
+  }
+}
