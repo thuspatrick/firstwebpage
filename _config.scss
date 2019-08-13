@@ -4,7 +4,7 @@ $show-home-image: true;
 $home-image: url(img/apple-device-blur-blurry-ok.jpg);
 $background-opacity: 0.9;
 @mixin easeOut() {
-  transition: all 1.5 ease-out;
+  transition: all 2000 ease-out;
 }
 @mixin background() {
   @if $show-home-image {
